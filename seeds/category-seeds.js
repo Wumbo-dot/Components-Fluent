@@ -26,5 +26,5 @@ const categoryData =  [
     },
     {
         category_name: 'Peripherals'
-    },
+    }
 ]
