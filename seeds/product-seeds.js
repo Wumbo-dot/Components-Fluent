@@ -51,7 +51,7 @@ const productData = [
     },
     {
         product_name: 'Asus Tuf Gaming Keyboard and Mouse Combo',
-        price: 65.99,
+        price: 107.99,
         stock: 4,
         category_id: 9,
     },
