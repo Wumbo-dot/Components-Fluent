@@ -1,0 +1,47 @@
+<script>
+    if (!window.performance && window.performance.navigation.type == 2) {
+        window.location.reload();
+    }
+    console.log("Checking" + "{{cartitems}}");
+    function d(evt) {
+        console.log("Checking" + evt);
+        window.location.href = "/updatingcheck";
+    }
+    function passEvent(evt) {
+        evt.preventDefault();
+        window.location.href = "/checkout"
+    }
+    function checkoutdis() {
+        var checkoutbtn = document.getElementById('checkout');
+        checkoutbtn.setAttribute('disabled', 'disabled');
+    }
+</script>
+
+<a href="cart/clear" id="clear-cart">Clear Cart</a>
+<a href="/fetchproducts" style="margin: left 20px;">Click Here to Add More!</a>
+<form method="POST" action="/updatecart">
+    <table>
+        <tr>
+            <td> Title</td>
+            <td> Price</td>
+            <td> Quantity</td>
+        </tr>
+        {{#each cartitems}}
+        <tr>
+            <td>{{<title>}}</td>
+            <td>{{price}}</td>
+            <td><input type="text" name="{{title}}" value="{{quantity}}" onkeyup="checkoutdis()"></td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <div>
+        Total Price is {{tital_price}}<br>
+        <button type="submit">Update Cart</button>
+        {{#if checkout}}
+        <button type="button" onclick="passEvent(event)" id="checkout">Checkout</button>
+        {{else}}
+        Fill Something in Here lol
+        {{/if}}
+    </div>
+</form>
