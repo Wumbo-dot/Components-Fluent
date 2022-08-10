@@ -36,3 +36,13 @@ app.use(require('./controllers/'));
 sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+//<<<<<<< HEAD
+//=======
+
+app.listen(PORT, () => {
+console.log(`App listening on port ${PORT}!`);
+});
+const routes = require('./routes');
+
+
+//>>>>>>> f3c4d8c284c924174d0ca224e789a5ccbccb9d68
