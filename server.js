@@ -6,7 +6,7 @@ const session = require('express-session')
 //<<<<<<< HEAD
 
 //=======
-const session = require('express-session')
+//const session = require('express-session')
 // >>>>>>> f5f705dfa6334bd630338676d42997e565faf24f
 // >>>>>>> 55f06153c381dc3514273f6ffd0ce1a14f1ab3a5
 const exphbs = require('express-handlebars');
